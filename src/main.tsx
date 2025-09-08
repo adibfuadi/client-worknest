@@ -6,12 +6,15 @@ import "./index.css";
 import App from "./App.tsx";
 import QueryProvider from "./context/query-provider.tsx";
 import { Toaster } from "./components/ui/toaster.tsx";
+import { ThemeProvider } from "./components/theme-provider.tsx";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <QueryProvider>
       <NuqsAdapter>
+      <ThemeProvider defaultTheme="light" storageKey="vite-ui-theme">
         <App />
+      </ThemeProvider>
       </NuqsAdapter>
       <Toaster />
     </QueryProvider>

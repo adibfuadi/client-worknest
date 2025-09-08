@@ -30,7 +30,7 @@ const RecentMembers = () => {
             <li
               key={index}
               role="listitem"
-              className="flex items-center gap-4 p-3 rounded-lg border border-gray-200 hover:bg-gray-50"
+              className="flex items-center gap-4 p-3 rounded-lg border border-sidebar-border hover:bg-sidebar-accent"
             >
               {/* Avatar */}
               <div className="flex-shrink-0">
@@ -47,7 +47,7 @@ const RecentMembers = () => {
 
               {/* Member Details */}
               <div className="flex flex-col">
-                <p className="text-sm font-medium text-gray-900">
+                <p className="text-sm font-medium">
                   {member.userId.name}
                 </p>
                 <p className="text-sm text-gray-500">{member.role.name}</p>
