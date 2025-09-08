@@ -18,6 +18,7 @@ import { toast } from "@/hooks/use-toast";
 const InviteUser = () => {
   const navigate = useNavigate();
   const queryClient = useQueryClient();
+  //
 
   const param = useParams();
   const inviteCode = param.inviteCode as string;
