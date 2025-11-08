@@ -7,7 +7,7 @@ const CreateProjectDialog = () => {
   return (
     <div>
       <Dialog modal={true} open={open} onOpenChange={onClose}>
-        <DialogContent className="sm:max-w-lg border-0">
+        <DialogContent className="sm:max-w-lg dark:border-2">
           <CreateProjectForm {...{ onClose }} />
         </DialogContent>
       </Dialog>
