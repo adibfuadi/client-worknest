@@ -50,7 +50,7 @@ const LogoutDialog = (props: {
   return (
     <>
       <Dialog open={isOpen} onOpenChange={setIsOpen}>
-        <DialogContent>
+        <DialogContent className="dark:border-[1px]">
           <DialogHeader>
             <DialogTitle>Are you sure you want to log out?</DialogTitle>
             <DialogDescription>
