@@ -76,16 +76,16 @@ export function WorkspaceSwitcher() {
         </button>
       </SidebarGroupLabel>
       <SidebarMenu>
-        <SidebarMenuItem>
+        <SidebarMenuItem className="my-1">
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
               <SidebarMenuButton
                 size="lg"
-                className="data-[state=open]:bg-sidebar-accent data-[state=open]:text-sidebar-accent-foreground bg-gray-10"
+                className="data-[state=open]:bg-sidebar-accent data-[state=open]:text-sidebar-accent-foreground bg-gray-10 group-data-[collapsible=icon]:ml-0.5"
               >
                 {activeWorkspace ? (
                   <>
-                    <div className="flex aspect-square size-8 items-center font-semibold justify-center rounded-lg bg-sidebar-primary text-sidebar-primary-foreground">
+                    <div className="flex aspect-square size-8 items-center font-semibold justify-center rounded-lg bg-primary text-sidebar-primary-foreground">
                       {activeWorkspace?.name?.split(" ")?.[0]?.charAt(0)}
                     </div>
                     <div className="grid flex-1 text-left text-sm leading-tight">

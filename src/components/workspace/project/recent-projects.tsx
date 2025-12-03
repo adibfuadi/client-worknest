@@ -37,7 +37,7 @@ const RecentProjects = () => {
         </div>
       )}
 
-      <ul role="list" className="space-y-2">
+      <ul role="list" className="divide-y divide-sidebar-border">
         {projects.map((project) => {
           const name = project.createdBy.name;
           const initials = getAvatarFallbackText(name);
@@ -47,7 +47,7 @@ const RecentProjects = () => {
             <li
               key={project._id}
               role="listitem"
-              className="shadow-none cursor-pointer border-0 py-2 hover:bg-sidebar-accent transition-colors ease-in-out "
+              className="shadow-none cursor-pointer border-0 px-2 py-4 hover:bg-sidebar-accent transition-colors ease-in-out "
             >
               <Link
                 to={`/workspace/${workspaceId}/project/${project._id}`}

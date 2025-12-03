@@ -28,7 +28,7 @@ const Header = () => {
 
   const pageHeading = getPageLabel(pathname);
   return (
-    <header className="flex sticky top-0 z-50 bg-background h-12 shrink-0 items-center border-b">
+    <header className="flex sticky top-0 z-50 bg-sidebar dark:bg-background dark:border-b h-16 shrink-0 items-center">
       <div className="flex justify-between w-full px-4">
         <div className="flex flex-1 items-center gap-2 px-3">
           <SidebarTrigger />
@@ -60,7 +60,7 @@ const Header = () => {
             </BreadcrumbList>
           </Breadcrumb>
         </div>
-          <ModeToggle/>
+        <ModeToggle />
       </div>
     </header>
   );

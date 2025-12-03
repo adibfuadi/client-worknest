@@ -44,13 +44,18 @@ const ProjectHeader = () => {
   };
   return (
     <div className="flex items-center justify-between space-y-2">
-      <div className="flex items-center gap-2">
-        <h2 className="flex items-center gap-3 text-xl font-medium truncate tracking-tight">
-          {renderContent()}
-        </h2>
-        <PermissionsGuard requiredPermission={Permissions.EDIT_PROJECT}>
-          <EditProjectDialog project={project} />
-        </PermissionsGuard>
+      <div>
+        <div className="flex items-center gap-2">
+          <h2 className="flex items-center gap-3 text-xl font-medium truncate tracking-tight">
+            {renderContent()}
+          </h2>
+          <PermissionsGuard requiredPermission={Permissions.EDIT_PROJECT}>
+            <EditProjectDialog project={project} />
+          </PermissionsGuard>
+        </div>
+        <p className="text-muted-foreground">
+          Here&apos;s the list of task for this project!
+        </p>
       </div>
       <CreateTaskDialog projectId={projectId} />
     </div>

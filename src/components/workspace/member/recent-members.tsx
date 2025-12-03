@@ -21,7 +21,7 @@ const RecentMembers = () => {
         />
       ) : null}
 
-      <ul role="list" className="space-y-3">
+      <ul role="list" className="divide-y divide-sidebar-border">
         {members.map((member, index) => {
           const name = member?.userId?.name || "";
           const initials = getAvatarFallbackText(name);
@@ -30,7 +30,7 @@ const RecentMembers = () => {
             <li
               key={index}
               role="listitem"
-              className="flex items-center gap-4 p-3 rounded-lg border border-sidebar-border hover:bg-sidebar-accent"
+              className="flex items-center gap-4 p-3 hover:bg-sidebar-accent"
             >
               {/* Avatar */}
               <div className="flex-shrink-0">
@@ -47,15 +47,13 @@ const RecentMembers = () => {
 
               {/* Member Details */}
               <div className="flex flex-col">
-                <p className="text-sm font-medium">
-                  {member.userId.name}
-                </p>
+                <p className="text-sm font-medium">{member.userId.name}</p>
                 <p className="text-sm text-gray-500">{member.role.name}</p>
               </div>
 
               {/* Joined Date */}
               <div className="ml-auto text-sm text-gray-500">
-                <p>Joined</p>
+                <p className="text-end">Joined</p>
                 <p>{member.joinedAt ? format(member.joinedAt, "PPP") : null}</p>
               </div>
             </li>
